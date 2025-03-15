@@ -8,4 +8,4 @@ router.get('/user',(req, res)=> {
     router.post('/registeruser', registerController);
     router.post('/loginuser', loginController);
     router.put('/updateuser', authenticateToken , updateUserController);
-module.exports = router;
+module.exports = router;    
