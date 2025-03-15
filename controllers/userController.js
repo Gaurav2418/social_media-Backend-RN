@@ -79,7 +79,7 @@ const loginController = async(req, res)=>{
 
         // if user not found in db
        if(!user){
-        return res.status(500).send({
+        return res.status(404).send({
           success: false,
           message:'User not found'
         })
