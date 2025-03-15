@@ -79,7 +79,7 @@ const loginController = async(req, res)=>{
 
         // if user not found in db
        if(!user){
-        return res.status(404).send({
+        return res.status(401).send({
           success: false,
           message:'User not found'
         })
@@ -97,7 +97,7 @@ const loginController = async(req, res)=>{
 
           // if passwords not matched 
        if(!match){
-        return res.status(500).send({
+        return res.status(402).send({
           success: false,
           message:"Please enter correct Username and Password"
         })
