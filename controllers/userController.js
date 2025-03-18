@@ -97,7 +97,7 @@ const loginController = async(req, res)=>{
 
           // if passwords not matched 
        if(!match){
-        return res.status(402).send({
+        return res.status(403).send({
           success: false,
           message:"Please enter correct Username and Password"
         })

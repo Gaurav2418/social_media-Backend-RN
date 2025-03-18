@@ -35,6 +35,7 @@ const createPostController = async (req, res) => {
 const getAllPostController = async(req, res) =>{
     try {
         const posts = await postModel.find()
+        .populate("postedBy", "_id name")
         return res.status(200).send({
             success: true,
             message: "All posts fetched successfully",
